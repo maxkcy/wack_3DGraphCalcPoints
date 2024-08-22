@@ -1,0 +1,68 @@
+.flexbox-1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.flexbox-2 {
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+#equation {
+  flex: 2;
+  border: 3px solid #bbff00;
+  border-width: 5px;
+  border-radius: 5px;
+}
+
+#axis-selector {
+  border: 3px solid #ff5100;
+  border-width: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.graph-class {
+  margin-top: 20px;
+  flex-grow: calc(100%);
+  flex-wrap: wrap;
+}
+
+.graph-input {
+  float: right;
+  margin-left: 15px;
+  margin-right: 10px;
+  width: 25px;
+}
+
+.fb1-buttons {
+  flex: 1;
+  max-width: 150px;
+}
+
+.points {
+  display: flex;
+  border: 3px solid #ffd001;
+  border-width: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.line-break {
+  width: 100%;
+}
+
+.range {
+  display: flex;
+  border: 3px solid #01a2ff;
+  border-width: 5px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Graphing Calculator</title>
+
+    <link rel="stylesheet" href="/Styles/style.css" />
+    <script src="index.js"></script>
+    <script src="math/math.js"></script>
+    <script src="algebraHelper.js"></script>
+    <script src="math/algebra.js"></script>
+  </head>
+
+  <body>
+    <div class="flexbox-1">
+      <input
+        type="text"
+        name="equation-input"
+        id="equation"
+        placeholder="Equation..."
+        value="-x^2 + y^2 + z^2"
+      />
+      <button class="fb1-buttons" onclick="onSimplify()">Simplify</button>
+      <button class="fb1-buttons" onclick="onEvaluate()">Evaluate</button>
+      <button class="fb1-buttons" onclick="onSolve()">Solve</button>
+      <button class="fb1-buttons" onclick="onSolveRange()">
+        Solve Points Over Range
+      </button>
+    </div>
+
+    <div class="flexbox-2">
+      <fieldset id="axis-selector">
+        <legend>Axis</legend>
+
+        <div>
+          <input
+            type="checkbox"
+            name="checkbox-x"
+            class="axis-option"
+            onchange="onToggleAxisCheckbox(this)"
+            checked="true"
+          />
+          <label>X</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="checkbox-y"
+            class="axis-option"
+            onchange="onToggleAxisCheckbox(this)"
+          />
+          <label>Y</label>
+        </div>
+
+        <div>
+          <input
+            type="checkbox"
+            name="checkbox-z"
+            class="axis-option"
+            onchange="onToggleAxisCheckbox(this)"
+          />
+          <label>Z</label>
+        </div>
+      </fieldset>
+
+      <fieldset class="points">
+        <legend align="center">Points</legend>
+
+        <div class="graph-class">
+          <label>X: </label>
+          <input type="text" id="x-input" class="graph-input" value="-2" />
+        </div>
+
+        <div class="line-break"></div>
+
+        <div class="graph-class">
+          <label>Y: </label>
+          <input type="text" id="y-input" class="graph-input" value="-2" />
+        </div>
+
+        <div class="line-break"></div>
+
+        <div class="graph-class">
+          <label>Z: </label>
+          <input type="text" id="z-input" class="graph-input" value="-2" />
+        </div>
+      </fieldset>
+
+      <div>
+        <fieldset class="range">
+          <legend align="center">Range</legend>
+
+          <div class="graph-class">
+            <label>Start: </label>
+            <input
+              type="text"
+              id="start-input"
+              class="graph-input"
+              value="-2"
+            />
+          </div>
+
+          <div class="graph-class">
+            <label>End: </label>
+            <input type="text" id="end-input" class="graph-input" value="2" />
+          </div>
+
+          <div class="graph-class">
+            <label>Calculation Precision: </label>
+            <input
+              type="text"
+              id="precision-input"
+              class="graph-input"
+              value=".25"
+            />
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </body>
+</html>
